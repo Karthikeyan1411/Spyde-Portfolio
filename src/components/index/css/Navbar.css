@@ -10,6 +10,7 @@
   top: 0;
   left: 0;
   background-color: #333;
+  transition: transform 0.3s ease-in-out;
 }
 
 .nav-logo {
@@ -60,6 +61,14 @@
   font-size: 1.5rem;
   cursor: pointer;
   text-align: left;
+}
+
+.hidden{
+  transform: translateY(-100%);
+}
+
+.navbar-visible{
+  transform: translateY(0);
 }
 
 /* Responsive Styles */
