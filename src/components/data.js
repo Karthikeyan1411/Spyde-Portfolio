@@ -1,7 +1,7 @@
 const data = [
     {
         id: 1,
-        logoImg: "html.png",
+        logoImg: "html.webp",
         logoImg_alt : "html-logo"
     },
     {
@@ -11,7 +11,7 @@ const data = [
     },
     {
         id: 3,
-        logoImg: "js.png",
+        logoImg: "js.webp",
         logoImg_alt : "js-logo"
     },
     {

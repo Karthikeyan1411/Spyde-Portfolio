@@ -17,7 +17,7 @@ const Projects = ({ projectData }) => {
         {projectData.map((project) => (
           <section className="card" key={project.id}>
             <img
-              src={`images/projects/${project.projectImage}`}
+              src={`images/projects/${project.projectImage}.webp`}
               alt={project.title}
               className="card-img"
               loading="lazy"

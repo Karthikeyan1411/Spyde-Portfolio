@@ -44,10 +44,18 @@
   color: var(--dark-grey);
   font-size: 1.2rem;
   margin: 0 auto 2px 5rem;
-  letter-spacing: 0.01rem;
   line-height: 1.2;
+  
   text-align: justify;
+  text-justify: inter-word;
+  white-space: normal;
+  hyphens: auto;
+
+  word-spacing: -0.1rem;
+  letter-spacing: 0.01rem;
+  
   width: 50%;
+  max-width: 800px;
 }
 
 .home p span {
@@ -158,11 +166,17 @@
     padding-bottom: 100px;
   }
   .home .hero-text {
-    margin: 0 auto auto 2rem;
+    margin: 0 auto auto 20px;
   }
   .home p {
-    width: 55%;
-    margin: 0 auto auto 2rem;
+    width: 60%;
+    margin-left: 20px;
+    font-size: 1rem;
+  }
+  .home a{
+    width: 63%;
+    margin-left: 10px;
+    font-size: 1rem;
   }
   .profile-pic img {
     margin-left: 15px;
@@ -171,7 +185,8 @@
     top: 15rem;
   }
   .home .logo {
-    margin: 0 auto auto 2rem;
+    width: auto;
+    margin: 0 auto auto 10px;
     grid-gap: 2%;
   }
 }
@@ -184,19 +199,25 @@
     margin: 0 auto auto 1rem;
   }
   .home p {
-    width: 62%;
-    margin: 0 auto auto 1rem;
-    line-height: 1;
-    letter-spacing: normal;
+    width: 60%;
+    margin-left: 20px;
+    font-size: 1rem;
+    /* word-spacing: -0.1rem; */
+  }
+  .home a{
+    width: 70%;
+    margin-left: 20px;
+    font-size: 1rem;
   }
   .profile-pic img {
-    height: 110px;
-    width: 110px;
-    left: 75%;
+    height: 220px;
+    width: 200px;
+    left: 65%;
     top: 15rem;
   }
   .home .logo {
-    margin: 0 auto auto 1rem;
-    gap: 3px;
+    margin-left: 10px;
+    width: auto;
+    grid-gap: 2%;
   }
 }

@@ -37,7 +37,7 @@ const Home = (props) => {
 
       <div className="profile-pic">
         <img 
-          src="images/profile_pic/Clg.jpg" alt="profile-pic" 
+          src="images/profile_pic/Clg.webp" alt="profile-pic" 
           loading="lazy"
         />
       </div>

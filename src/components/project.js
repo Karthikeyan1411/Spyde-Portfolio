@@ -1,7 +1,7 @@
 const project = [
     {
         id: 1,
-        projectImage:"connect4.png",
+        projectImage:"connect4",
         title: 'Connect 4 Game',
         techStack: 'React, CSS',
         siteLink: "https://spyde-connect-4.netlify.app",
@@ -9,7 +9,7 @@ const project = [
     },
     {
         id: 2,
-        projectImage:"color_changer.png",
+        projectImage:"color_changer",
         title: 'Color Changer',
         techStack: 'React, CSS',
         siteLink: "https://spyde-color-changer.netlify.app/",
@@ -17,7 +17,7 @@ const project = [
     },
     {
         id: 3,
-        projectImage:"e_commerce_online_shop.png",
+        projectImage:"e_commerce_online_shop",
         title: 'E-Commerce Online Shop',
         techStack: 'HTML, CSS, JavaScript',
         siteLink: "https://spyde-e-commerce.netlify.app",
@@ -25,7 +25,7 @@ const project = [
     },
     {
         id: 4,
-        projectImage:"social_media_app.png",
+        projectImage:"social_media_app",
         title: 'Social Media App',
         techStack: 'React, CSS',
         siteLink: "https://spyde-social-app.netlify.app",
@@ -33,7 +33,7 @@ const project = [
     },
     {
         id: 5,
-        projectImage:"todo_app.png",
+        projectImage:"todo_app",
         title: 'Todo App',
         techStack: 'HTML, CSS, JavaScript',
         siteLink: "https://spyde-todo-list-app.netlify.app",
@@ -41,7 +41,7 @@ const project = [
     },
     {
         id: 6, 
-        projectImage:"airbnb.png",
+        projectImage:"airbnb",
         title: 'Airbnb',
         techStack: 'React, CSS',
         siteLink: "https://spyde-bnbair-app.netlify.app/",
@@ -49,7 +49,7 @@ const project = [
     }, 
     {
         id: 7,
-        projectImage: "calculator.png",
+        projectImage: "calculator",
         title: 'Calculator',
         techStack: 'HTML, CSS, JavaScript',
         siteLink: "https://spyde-calc.netlify.app/",
@@ -57,7 +57,7 @@ const project = [
     },
     {
         id: 8,
-        projectImage: "e_commerce_store_using_react.png",
+        projectImage: "e_commerce_store_using_react",
         title: 'E-Commerce Store using React',
         techStack: 'React, CSS',
         siteLink: "https://spyde-e-commerce-store.netlify.app/",
@@ -65,7 +65,7 @@ const project = [
     },
     {
         id: 9,
-        projectImage:"form_validation.png",
+        projectImage:"form_validation",
         title: 'Simple Form Validation',
         techStack: 'HTML, CSS, JavaScript',
         siteLink: "https://spyde-form-validation.netlify.app/",
@@ -73,7 +73,7 @@ const project = [
     },
     {
         id: 10,
-        projectImage:"image_gallery.png",
+        projectImage:"image_gallery",
         title: 'Image Gallery',
         techStack: 'HTML, CSS, JavaScript',
         siteLink: "https://spyde-image-gallery.netlify.app/",
@@ -81,7 +81,7 @@ const project = [
     },
     {
         id: 11,
-        projectImage:"login_page.png",
+        projectImage:"login_page",
         title: 'Login Page',
         techStack: 'HTML, CSS, JavaScript',
         siteLink: "https://spyde-form-page.netlify.app/",
@@ -89,7 +89,7 @@ const project = [
     },
     {
         id: 12,
-        projectImage:"netflix_clone.png",
+        projectImage:"netflix_clone",
         title: 'Netflix Clone',
         techStack: 'HTML, CSS',
         siteLink: "https://spyde-nflix-dupli.netlify.app/",
@@ -97,7 +97,7 @@ const project = [
     },
     {
         id: 13,
-        projectImage:"sign_up_page_using_react.png",
+        projectImage:"sign_up_page_using_react",
         title: 'Sign Up Page using React',
         techStack: 'React, HTML, CSS',
         siteLink: "https://spyde-sign-up-page.netlify.app/",
@@ -105,7 +105,7 @@ const project = [
     },
     {
         id: 14,
-        projectImage:"simple_blog.png",
+        projectImage:"simple_blog",
         title: 'Simple Blog',
         techStack: 'HTML, CSS',
         siteLink: "https://spyde-blog.netlify.app/",
@@ -113,7 +113,7 @@ const project = [
     },
     {
         id: 15,
-        projectImage:"simple_counter.png",
+        projectImage:"simple_counter",
         title: 'Simple Counter',
         techStack: 'HTML, CSS, JavaScript',
         siteLink: "https://spyde-counter.netlify.app/",
@@ -121,7 +121,7 @@ const project = [
     },
     {
         id: 16,
-        projectImage:"simple_landing_page.png",
+        projectImage:"simple_landing_page",
         title: 'Simple Landing Page',
         techStack: 'HTML, CSS, JavaScript',
         siteLink: "https://spyde-landing-page.netlify.app/",
@@ -129,7 +129,7 @@ const project = [
     },
     {
         id: 17,
-        projectImage:"simple_todo_app.png",
+        projectImage:"simple_todo_app",
         title: 'Simple Todo App',
         techStack: 'HTML, CSS, JavaScript',
         siteLink: "https://spyde-todo-app.netlify.app/",
@@ -137,7 +137,7 @@ const project = [
     },
     {
         id: 18,
-        projectImage:"simple_todo_app_using_react.png",
+        projectImage:"simple_todo_app_using_react",
         title: 'Simple Todo App using React',
         techStack: 'React, CSS',
         siteLink: "https://spyde-todo-app-react.netlify.app/",
@@ -145,7 +145,7 @@ const project = [
     },
     {
         id: 19,
-        projectImage:"student_attendance_qr_code_generator_using_react.png",
+        projectImage:"student_attendance_qr_code_generator_using_react",
         title: 'Student Attendance QR Code Generator using React',
         techStack: 'React, CSS',
         siteLink: "https://spyde-student-attendance-qr.netlify.app/",
@@ -153,7 +153,7 @@ const project = [
     },
     {
         id: 20,
-        projectImage:"text_to_speech_converter.png",
+        projectImage:"text_to_speech_converter",
         title: 'Text to Speech Converter',
         techStack: 'HTML, CSS, JavaScript',
         siteLink: "https://spyde-text-to-speech-converter.netlify.app/",

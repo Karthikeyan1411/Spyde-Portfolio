@@ -18,7 +18,7 @@ const Gallery = (props) => {
                 props.galData.map((item) => (
                     <img
                         key={item.id} 
-                        src={`/images/gallery/${item.img}`}
+                        src={`/images/gallery/${item.img}.webp`}
                         alt={item.altImg} 
                         className='pics'
                         loading='lazy'

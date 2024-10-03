@@ -21,6 +21,7 @@ const Navbar = () => {
               src="images/favicons/spider.png" 
               alt="logo-img" 
               className='nav-logo'
+              loading='lazy'
           />
         </NavLink>
         {/* menu items */}
