@@ -4,50 +4,101 @@
 }
 
 .gal-container .gallery{
-    column-count: 3;
-    column-width: 33%;
-    padding: 50px;
+    padding: 30px;
     /* optional: set max width to ensure it behaves well */
     max-width: 1200px;
     margin: 0 auto;
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 30px; */
 }
 
 .gallery .pics{
-    transition: all 350ms ease;
+    transition: transform 1s ease;
     cursor: pointer;
     margin-bottom: 12px;
 
     width: 100%;
+    max-width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
+
     padding: 3px;
-    border-radius: 50px;
+    border-radius: 10px;
 
     border: 2px solid var(--yellow);
     border-right: 1px solid rgb(231, 86, 86);
     border-left: 1px solid rgb(231, 86, 86);
 
-    filter: opacity(0.8);
-    /* width: 100%; */
+    filter: opacity(0.8) grayscale(50%);
 }
 
 .gallery .pics:hover,
 .gallery .pics:focus{
-    filter: drop-shadow(1px 1px 10px gray) opacity(1);
+    filter: drop-shadow(1px 1px 8px gray) opacity(1);
+    transform: scale(1.08);
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+    .gal-container{
+        padding: 30px;
+        margin-top: 50px;
+    }
+    .gal-container .gallery{
+        max-width: 900px;
+        padding: 20px;
+    }
+}
+
 @media (max-width: 768px) {
-    .gallery {
+    .gal-container{
+        padding: 20px;
+        padding-bottom: 40px;
+    }
+    .gallery .pics{
+        padding: 4px;
+    }
+    .gallery{
         column-count: 2;
+        column-gap: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .gal-container{
+        padding: 15px;
+        padding-bottom: 80px;
+    }
+    .gallery .pics{
+        padding: 5px;
+    }
+    .gallery{
+        column-count: 1;
     }
 }
 
 @media (max-width: 425px){
+    .gal-container{
+        padding: 10px;
+        padding-bottom: 80px;
+    }
+    .gallery .pics{
+        margin-bottom: 8px;
+        padding: 4px;
+        max-width: 100%;
+    }
     .gallery{
-        column-count: auto;
+        column-count: 1;
+    }
+}
+
+@media (max-width: 375px) {
+    .gal-container{
+        padding: 8px;
+        padding-bottom: 100px;
+    }
+    .gallery .pics{
+        margin-bottom: 6px;
+    }
+    .gallery{
+        column-count: 1;
     }
 }

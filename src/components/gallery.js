@@ -85,11 +85,6 @@ const gallery = [
         altImg: "gal-img"
     },
     {
-        id: 18,
-        img: "18",
-        altImg: "gal-img"
-    },
-    {
         id: 19,
         img: "19",
         altImg: "gal-img"

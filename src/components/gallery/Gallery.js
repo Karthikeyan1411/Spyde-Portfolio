@@ -10,15 +10,17 @@ const Gallery = (props) => {
     usePageTitle();
 
   return (
-    <section className="gal-container" style={{padding: '10px'}}>
+    <section 
+        className="gal-container"
+    >
         <h2 className='gal-head'>Gallery</h2>
         <div className="head-bottom"></div>
         <ResponsiveMasonry
-            // columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}
+            columnsCountBreakPoints={{350: 1, 420: 2, 600: 3, 750: 4, 900: 5}}
         >
         <Masonry 
             className="gallery" 
-            gutter='20px'
+            gutter='10px'
         >
             {
                 props.galData.map((item) => (
@@ -28,7 +30,6 @@ const Gallery = (props) => {
                         alt={item.altImg} 
                         className='pics'
                         loading='lazy'
-                        // style={{width: "100%", display: "block", cursor: "pointer"}}
                     />
                 ))
             }
