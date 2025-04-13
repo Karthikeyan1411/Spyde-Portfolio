@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import './App.css';
@@ -15,9 +16,20 @@ import gallery from './components/gallery';
 
 function App() {
 
+  const [isDark, setIsDark] = useState(true);
+
+  const toggleTheme = () => {
+    setIsDark(prev => !prev);
+  };
+
+  // set body class when theme changes
+  useEffect(() => {
+    document.body.className= isDark ? 'dark-theme': 'light-theme';
+  }, [isDark]);
+
   return (
     <div className="App">
-      <Navbar />
+      <Navbar toggleTheme={toggleTheme} isDark={isDark} />
       <Routes>
         <Route 
           path='/' 

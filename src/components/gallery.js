@@ -89,6 +89,26 @@ const gallery = [
         img: "19",
         altImg: "gal-img"
     },
+    {
+        id: 20,
+        img: "20",
+        altImg: "gal-img"
+    },
+    {
+        id: 21,
+        img: "21",
+        altImg: "gal-img"
+    },
+    {
+        id: 22,
+        img: "22",
+        altImg: "gal-img"
+    },
+    {
+        id: 23,
+        img: "23",
+        altImg: "gal-img"
+    },
 ]
 
 export default gallery;

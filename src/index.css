@@ -14,15 +14,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background: url('../public/images/bg/bg.jpg') center / cover no-repeat; */
-  background-color: #333;
+  /* background-color: #333; */
   /* background-attachment: fixed; */
-  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("../public/images/bg/bg1.jpg") no-repeat;
+  /* background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("../public/images/bg/bg1.webp") no-repeat; */
+  background: linear-gradient((var(--bg-color), var(--bg-color)), var(--bg-image) no-repeat);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+
+  color: var(--text-color);
 }
 
 :root{
+  /* default Theme */
   --white: white;
   --dark-grey: #ababab;
   --light-grey: #808080;
@@ -33,6 +37,29 @@ body {
   --hover-color: rgb(82, 129, 155);
   --main-color: #00ffee;
   --dodger: dodgerblue;
+}
+
+/* Dark Theme */
+body.light-theme {
+  --black: #000;
+  --dark-grey: #444;
+  --light-grey: #666;
+  --dark-bg: #f1f1f1;
+  --light-bg: #fff;
+  --yellow: #ffcc00;
+  --main-color: #0077ff;
+  --dodger: #1e90ff;
+  background: linear-gradient(rgba(255, 255, 255, 0.312), rgba(255, 255, 255, 0.44)), url("../public/images/bg/bg.webp") no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.dark-theme {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../public/images/bg/bg1.webp") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.btn {
+  color: var(--text-color);
 }
 
 html{

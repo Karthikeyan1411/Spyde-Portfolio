@@ -1,0 +1,28 @@
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  font-size: 24px;
+  color: var(--dark-grey);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:nth-child(1):hover { color: var(--white); } /*Github - black*/
+.social-icons a:nth-child(2):hover { color: #0072b1; } /*Linkedin - blue*/
+.social-icons a:nth-child(3):hover { color: #d62976; } /*Instagram - pink*/
+.social-icons a:nth-child(4):hover { color: #00acee; } /*Twitter/X - blue*/
+.social-icons a:nth-child(5):hover { color: #5865F2; } /*Discord - purple*/
+.social-icons a:nth-child(6):hover { color: #1877F2; } /*Facebook - blue*/
+
+.social-icons a:hover {
+  /* color: var(--dodger); */
+  transform: scale(1.2);
+  transition-duration: 0.3s;
+  /* box-shadow: 1px 1px 1px var(--dodger); */
+  /* border-radius: 0% 10% 20% 50%; */
+  /* background-color: var(--bg-color); */
+}

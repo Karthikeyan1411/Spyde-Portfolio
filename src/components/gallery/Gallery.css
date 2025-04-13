@@ -1,104 +1,144 @@
-.gal-container{
+.gal-container {
     padding: 40px;
     margin-top: 60px;
 }
 
-.gal-container .gallery{
-    padding: 30px;
-    /* optional: set max width to ensure it behaves well */
-    max-width: 1200px;
-    margin: 0 auto;
+.gal-head {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+  position: relative;
 }
 
-.gallery .pics{
-    transition: transform 1s ease;
-    cursor: pointer;
-    margin-bottom: 12px;
+.gal-head::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 3px;
+  background-color: var(--dodger);
+  border-radius: 3px;
+}
 
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
+.gal-container .gallery {
+  padding: 30px;
+  /* optional: set max width to ensure it behaves well */
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-    padding: 3px;
-    border-radius: 10px;
+.gallery .pics {
+  transition: transform 1s ease;
+  cursor: pointer;
+  margin-bottom: 12px;
 
-    border: 2px solid var(--yellow);
-    border-right: 1px solid rgb(231, 86, 86);
-    border-left: 1px solid rgb(231, 86, 86);
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 
-    filter: opacity(0.8) grayscale(50%);
+  padding: 3px;
+  border-radius: 10px;
+
+  border: 2px solid var(--yellow);
+  border-right: 1px solid rgb(231, 86, 86);
+  border-left: 1px solid rgb(231, 86, 86);
+
+  filter: opacity(0.8) grayscale(50%);
 }
 
 .gallery .pics:hover,
-.gallery .pics:focus{
-    filter: drop-shadow(1px 1px 8px gray) opacity(1);
-    transform: scale(1.08);
+.gallery .pics:focus {
+  filter: brightness(1.15) saturate(1.5) drop-shadow(0px 0px 5px var(--dodger));
+  transform: scale(1.08) rotate(1deg);
+  transition: all 0.4s ease;
+}
+
+.zoom-wrapper {
+    position: relative;
+    transition: transform 0.4s ease, z-index 0.2s ease;
+    z-index: 1;
+}
+
+.zoom-wrapper.zoomed {
+    position: relative;
+    transform: scale(1.5);
+    z-index: 10;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease;
+}
+
+.backdrop-blur {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px);
+    z-index: 5;
 }
 
 /* Responsive */
 @media (max-width: 1024px) {
-    .gal-container{
-        padding: 30px;
-        margin-top: 50px;
-    }
-    .gal-container .gallery{
-        max-width: 900px;
-        padding: 20px;
-    }
+  .gal-container {
+    padding: 30px;
+    margin-top: 50px;
+  }
+  .gal-container .gallery {
+    max-width: 900px;
+    padding: 20px;
+  }
 }
 
 @media (max-width: 768px) {
-    .gal-container{
-        padding: 20px;
-        padding-bottom: 40px;
-    }
-    .gallery .pics{
-        padding: 4px;
-    }
-    .gallery{
-        column-count: 2;
-        column-gap: 10px;
-    }
+  .gal-container {
+    padding: 20px;
+    padding-bottom: 40px;
+  }
+  .gallery .pics {
+    padding: 4px;
+  }
+  .zoom-wrapper.zoomed {
+    transform: scale(1.3);
+  }
 }
 
 @media (max-width: 600px) {
-    .gal-container{
-        padding: 15px;
-        padding-bottom: 80px;
-    }
-    .gallery .pics{
-        padding: 5px;
-    }
-    .gallery{
-        column-count: 1;
-    }
+  .gal-container {
+    padding: 15px;
+    padding-bottom: 60px;
+  }
+  .gallery .pics {
+    padding: 5px;
+  }
+  .zoom-wrapper.zoomed {
+    transform: scale(1.2);
+  }
 }
 
-@media (max-width: 425px){
-    .gal-container{
-        padding: 10px;
-        padding-bottom: 80px;
-    }
-    .gallery .pics{
-        margin-bottom: 8px;
-        padding: 4px;
-        max-width: 100%;
-    }
-    .gallery{
-        column-count: 1;
-    }
+@media (max-width: 425px) {
+  .gal-container {
+    padding: 10px;
+    padding-bottom: 60px;
+  }
+  .gallery .pics {
+    margin-bottom: 8px;
+    padding: 4px;
+  }
+  .zoom-wrapper.zoomed {
+    transform: scale(1.1);
+  }
 }
 
 @media (max-width: 375px) {
-    .gal-container{
-        padding: 8px;
-        padding-bottom: 100px;
-    }
-    .gallery .pics{
-        margin-bottom: 6px;
-    }
-    .gallery{
-        column-count: 1;
-    }
+  .gal-container {
+    padding: 8px;
+    padding-bottom: 80px;
+  }
+  .gallery .pics {
+    margin-bottom: 6px;
+  }
+  .zoom-wrapper.zoomed {
+    transform: scale(1.05);
+  }
 }

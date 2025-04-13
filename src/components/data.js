@@ -11,7 +11,7 @@ const data = [
     },
     {
         id: 3,
-        logoImg: "js.webp",
+        logoImg: "javascript.webp",
         logoImg_alt : "js-logo"
     },
     {
@@ -19,16 +19,26 @@ const data = [
         logoImg: "react.svg",
         logoImg_alt : "react-logo"
     },
-    // {
-    //     id: 5,
-    //     logoImg: "nodejs.webp",
-    //     logoImg_alt : "nodejs-logo"
-    // },
-    // {
-    //     id: 6,
-    //     logoImg: "mongodb.svg",
-    //     logoImg_alt : "mongodb-logo"
-    // },
+    {
+        id: 5,
+        logoImg: "java.webp",
+        logoImg_alt : "java-logo"
+    },
+    {
+        id: 6,
+        logoImg: "python.webp",
+        logoImg_alt : "python-logo"
+    },
+    {
+        id: 7,
+        logoImg: "my-sql.webp",
+        logoImg_alt : "my-sql-logo"
+    },
+    {
+        id: 8,
+        logoImg: "mongodb.webp",
+        logoImg_alt : "mongodb-logo"
+    },
 ]
 
 export default data;

@@ -1,223 +1,358 @@
-.home {
+.home{
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  text-align: left;
-  padding-top: 6rem;
-  padding-bottom: 60px;
-  position: sticky;
-  animation: slide 1s ease forwards;
+  height: 100vh;
 }
 
-.home .hero-text {
-  color: var(--white);
-  font-size: 3rem;
-  font-weight: 200;
-  line-height: 1.2;
-  text-align: left;
-  margin: 0 auto auto 5rem;
-}
-
-.home .hero-text span {
-  font-weight: bold;
-  font-size: 4rem;
-  color: var(--main-color);
-  display: inline-block;
-  letter-spacing: 2px;
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing 6s linear infinite;
-}
-
-@keyframes typing {
-  0%, 10%, 100% {
-    width: 0;
-  }
-  70%, 90% {
-    width: 100%;
-  }
-}
-
-.home p {
-  color: var(--dark-grey);
-  font-size: 1.2rem;
-  margin: 0 auto 2px 5rem;
-  line-height: 1.2;
-  
-  text-align: justify;
-  text-justify: inter-word;
-  white-space: normal;
-  hyphens: auto;
-
-  word-spacing: -0.1rem;
-  letter-spacing: 0.01rem;
-  
-  width: 50%;
-  max-width: 800px;
-}
-
-.home p span {
-  font-weight: bold;
-  color: var(--main-color);
-  font-style: oblique;
-}
-
-.home a {
-  padding: 10px;
-  margin: 0 auto 2px 5rem;
-  text-align: right;
-  width: 50%;
-  font-size: 1.2rem;
-  color: var(--dark-grey);
-  text-decoration: none;
-  cursor: default;
-}
-
-.home a span {
-  color: var(--main-color);
-  font-weight: bold;
-  font-style: italic;
-  cursor: pointer;
-}
-
-.home a span:hover {
-  color: var(--hover-color);
-  border-bottom: 2px solid var(--main-color);
-}
-
-.profile-pic img {
-  height: 70%;
-  position: absolute;
-  display: block;
-  top: 8rem;
-  left: 65%;
-  border-radius: 5vh;
-  z-index: 1;
-  filter: opacity(80%);
-  align-items: stretch;
-}
-
-.profile-pic:hover img {
-  filter: drop-shadow(10px 10px 30px gray);
-  animation: border-animate 4s linear infinite;
-  border: 2px solid var(--yellow);
-  border-right: 2px solid rgb(231, 86, 86);
-  border-left: 2px solid rgb(231, 86, 86);
-}
-
-.home .logo {
+.home-container{
   display: flex;
+  align-items: flex-start;
+  /* max-width: 1200px; */
+  margin: 10px auto 0 0;
+  padding: 20px;
   justify-content: space-between;
-  margin: 0 auto 20px 5rem;
-  padding: 10px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 5%;
-  margin-right: auto;
 }
 
-.home .logo img {
-  display: block;
-  object-fit: cover;
-  object-position: center center;
-  width: 60px;
-  height: 60px;
-  transition-timing-function: ease-in-out;
+/* Left section - Front-end Skills */
+.skills-section{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
 
-  border: 2px solid var(--yellow);
+.skill-category{
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border: 2px solid var(--dark-grey);
+  border-radius: 5px;
+  color: var(--dark-grey);
+}
+
+.skill-icons{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: auto;
+  gap: 15px;
+}
+
+.skill-icons img{
+  width: 70px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+
+  border: 1px solid var(--yellow);
+  border-radius: 10%;
   border-right: 2px solid rgb(231, 86, 86);
   border-left: 2px solid rgb(231, 86, 86);
   background: var(--main-color) transparent;
-
-  padding: 10px;
-  border-radius: 20px;
-  transition: transform 0.3s ease;
-  filter: drop-shadow(4px 4px 10px black);
-  background: none;
-
-  cursor: pointer;
+  filter: drop-shadow(1px 1px 1px black);
 }
 
-.home .logo img:hover,
-.home .logo img:focus {
-  transform: scale(1.09);
-  animation: border-animate 4s linear infinite;
+.skill-icons img:hover{
+  transform: scale(1.02);
 }
 
-@keyframes border-animate {
-  0% {
-    border-color: orangered;
+/* Center Section - Profile */
+.profile-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.profile-pic{
+  width: 220px;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 120px 120px 0px 120px; /*rounded top, straight bottom*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.profile-pic img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: opacity(80%);
+}
+
+.profile-pic:hover img{
+  filter: drop-shadow(10px 10px 30px gray);
+  border: 2px solid var(--yellow);
+  border-right: 2px solid rgb(231, 86, 86);
+}
+
+.name{
+  font-size: 1.8rem;
+  color: var(--dodger);
+  font-weight: bold;
+  margin-top: 15px;
+  animation: blurIn 3s ease-in-out forwards;
+}
+
+.role{
+  font-size: 1rem;
+  color: var(--dark-grey);
+  margin-bottom: 15px;
+  animation: flyInLeft 4s ease-in-out forwards;
+}
+
+/* Right section - about me */
+.about-section{
+  flex: 2;
+  padding: 0 20px;
+}
+
+span{
+  color: var(--dodger);
+  font-style: oblique;
+}
+
+.about-title{
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.about-title::after{
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: var(--dodger);
+  border-radius: 3px;
+}
+
+.about-section p{
+  font-size: 1.1rem;
+  color: var(--dark-grey);
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn{
+  padding: 10px 20px;
+  border: 2px solid var(--dark-grey);
+  text-decoration: none;
+  color: var(--dark-grey);
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover{
+  background-color: var(--dark-grey);
+  color: var(--bg-color);
+}
+
+/* Media Query */
+@media (max-width: 1100px){
+  .home-container{
+    align-items: center;
   }
-  33% {
-    border-color: blueviolet;
+  .profile-section{
+    text-align: center;
+    margin-top: 10px;
   }
-  66% {
-    border-color: greenyellow;
+  .about-title::after {
+    bottom: -8px;
   }
-  100% {
-    border-color: red;
+  .about-section{
+    max-height: 500px;
+    max-width: 500px;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 0.8;
+  }
+  .skill-icons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .about-section p {
+    font-size: 14px;
+    line-height: 1.4;
   }
 }
 
-/* Responsive Styles */
-@media (max-width: 768px){
-  .home{
-    padding-bottom: 100px;
+@media (max-width: 768px) {
+  .home-container{
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px;
+    margin-top: 24rem;
+    width: 100%;
   }
-  .home .hero-text {
-    margin: 0 auto auto 20px;
+  .profile-section{
+    order: 1; /*Ensure the about section at first*/
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 33px;
   }
-  .home p {
+  .about-title{
+    margin-left: 33px;
+  }
+  .about-title::after {
+    bottom: -8px;
+  }
+  .about-section{
+    width: 100%;
+    max-width: 600px;
+    order: 2;
+    margin-top: 20px;
+    padding: 0 10px;
+    text-align: center;
+  }
+  .skills-section{
+    width: 80%;
+    order: 3; /*move skills section below the about section*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    margin-top: 30px;
+  }
+  .skill-category{
+    font-size: 1rem;
     width: 60%;
-    margin-left: 20px;
-    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 25px;
   }
-  .home a{
-    width: 63%;
-    margin-left: 10px;
-    font-size: 1rem;
+  .skill-icons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
   }
-  .profile-pic img {
-    margin-left: 15px;
-    height: 150px;
+  .skill-icons img{
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+  .skill-icons img:hover {
+    transform: scale(1.1);
+  }
+
+  .profile-pic {
     width: 150px;
-    top: 15rem;
+    height: 180px;
+    margin-top: 20px;
   }
-  .home .logo {
-    width: auto;
-    margin: 0 auto auto 10px;
-    grid-gap: 2%;
+
+  .name {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+
+  .role {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .about-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .about-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
   }
 }
 
-@media (max-width: 425px){
-  .home{
-    padding-bottom: 100px;
+@media (max-width: 425px) {
+  .home-container{
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    margin-top: 25rem;
   }
-  .home .hero-text {
-    margin: 0 auto auto 1rem;
+  .profile-section{
+    order: 1;
+    text-align: center;
+    margin-top: 20px;
   }
-  .home p {
-    width: 60%;
-    margin-left: 20px;
-    font-size: 1rem;
-    /* word-spacing: -0.1rem; */
+  .profile-pic{
+    width: 120px;
+    height: 150px;
+    margin-top: 10px;
   }
-  .home a{
-    width: 70%;
-    margin-left: 20px;
-    font-size: 1rem;
+  .name{
+    font-size: 1.2rem;
+    margin-top: 5px;
   }
-  .profile-pic img {
-    height: 220px;
-    width: 200px;
-    left: 65%;
-    top: 15rem;
+  .role{
+    font-size: 0.9rem;
+    margin-bottom: 5px;
   }
-  .home .logo {
-    margin-left: 10px;
-    width: auto;
-    grid-gap: 2%;
+  .social-icons{
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .about-title::after {
+    bottom: -5px;
+    height: 2px;
+  }
+  .about-section{
+    order: 2;
+    margin-top: 15px;
+    padding: 0 5px;
+    text-align: center;
+  }
+  .about-title{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  .about-section p{
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+  .skills-section{
+    order: 3;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .skill-category {
+    font-size: 0.9rem;
+    /* width: fit-content; */
+  }
+  .skill-icons img {
+    width: 50px;
+    height: 50px;
+  }
+  .skill-icons img:hover {
+    transform: scale(1.05);
   }
 }

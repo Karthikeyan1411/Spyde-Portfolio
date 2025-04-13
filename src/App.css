@@ -4,7 +4,7 @@ h2{
   color: var(--white);
 
   background-color: #2f8d46;
-  background-image: url("../public/images/bg/bg1.jpg");
+  background-image: url("../public/images/bg/bg1.webp");
   background-repeat: repeat;
   -webkit-background-clip: text;
   background-clip: text;
