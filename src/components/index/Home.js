@@ -11,7 +11,7 @@ const Home = (props) => {
       <div className="home-container">
         {/* rendering logos using props */}
         {/* Left Section - Front-end Skills */}
-        <div className="skills-section">
+        <div className="skills-section left">
           <div className="skill-category">Front-End</div>
           <div className="skill-icons">
             {props.logoData.slice(0, 4).map((logo, index) => (
@@ -85,7 +85,7 @@ const Home = (props) => {
 
         {/* rendering logos using props */}
         {/* Right Section - Back-end and Database Skills */}
-        <div className="skills-section">
+        <div className="skills-section right">
           <div className="skill-category">Back-End</div>
           <div className="skill-icons">
             {/* Duplicate logos for smooth transition */}
