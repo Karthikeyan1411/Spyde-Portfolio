@@ -116,7 +116,7 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (min-width: 425px) {
   .gal-container {
     padding: 10px;
     padding-bottom: 60px;
@@ -130,7 +130,7 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (min-width: 375px) {
   .gal-container {
     padding: 8px;
     padding-bottom: 80px;

@@ -43,3 +43,10 @@
     width: 60px;
   }
 }
+
+@media (min-width: 425px) {
+  .chart-wrapper{
+    padding: 5px;
+    font-size: small;
+  }
+}

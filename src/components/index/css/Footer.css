@@ -31,7 +31,7 @@
     }
 }
 
-@media (max-width: 425px){
+@media (min-width: 425px){
     .footer{
         padding: 5px;
     }
